@@ -1,7 +1,6 @@
-<h2>Exercicios 20.3</h2>
-<h3>Introdução à SQL - Filtrando de forma específica</h3>
+<h2>Reposiório de exercícios de BackEnd</h2>
 
-<p>Aqui contém exercícios em que utiliza os comandos WHERE, LIKE, IN e BETWEEN do mySQL</p>
+<p>Você poderá navegar por cada seção selecionando as branchs e sub-branchs específica por cada tópico</p>
 
 
 
