@@ -5,7 +5,6 @@ VALUES
   ('flavio', 'franco', 6, 'flavio.win@gmail.com', 1, 'flavio92ux', '123', 1);
 
 /* 2- Insira dois funcionários novos em apenas uma query . */
-
 INSERT INTO sakila.staff
   (first_name, last_name, address_id, email, store_id, username, password, active)
 VALUES
