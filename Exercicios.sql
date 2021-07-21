@@ -65,7 +65,6 @@ INSERT INTO Vendas(fornecimento, quantity, order_date)
     (9, 5, '2020-05-13 14:05:19');
 
 /* 1- Escreva uma query para exibir todas as peças que começam com GR . */
-
 SELECT * FROM PecasFornecedores.Pecas
 WHERE name LIKE 'GR%';
 
@@ -79,3 +78,8 @@ SELECT peca, Preco, Fornecedor
 FROM PecasFornecedores.Fornecimentos
 WHERE Fornecedor
 LIKE '%N%';
+
+/* 4- Escreva uma query para exibir todas as informações dos fornecedores que são empresas limitadas (LTDA). Ordene os resultados em ordem alfabética decrescente. */
+SELECT * FROM PecasFornecedores.Fornecedores
+WHERE name LIKE '%LTDA%'
+ORDER BY name DESC;
