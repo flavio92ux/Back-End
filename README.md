@@ -1,3 +1,7 @@
-<h2>Seja bem vindo ao repositório de Back-End</h2>
+<h2>Exercicios 20.3</h2>
+<h3>Introdução à SQL - Filtrando de forma específica</h3>
 
-<p>Aqui contém os exercicios desenvolvidos ao longo do curso da Trybe. Cada dia de exercício e seu respectivo assunto estará presente em uma branch deste repositório. Um abraço fraterno a todos.</p>
+<p>Aqui contém exercícios em que utiliza os comandos WHERE, LIKE, IN e BETWEEN do mySQL</p>
+
+
+
