@@ -100,3 +100,5 @@ INSERT INTO Scientists(SSN, Name)
   WHERE Name NOT LIKE 'A%';
 
   /* 8- Escreva uma query para exibir o nome de todos os projetos cujo código contenha a letra H . */
+  SELECT Name FROM Scientists.Projects
+  WHERE Code LIKE '%H%';
