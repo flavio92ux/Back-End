@@ -1,6 +1,6 @@
-<h2>Reposiório de exercícios de BackEnd</h2>
+<h2>Exercicios 20.3</h2>
 
-<p>Você poderá navegar por cada seção selecionando as branchs e sub-branchs específica por cada tópico</p>
+<p>Manipulacao de tabelas no banco de dados. Comandos utlizados: INSERT, UPDATE, DELETE</p>
 
 
 
