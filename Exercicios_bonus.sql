@@ -83,8 +83,9 @@ INSERT INTO Scientists(SSN, Name)
   WHERE Code LIKE '%3%'
   ORDER BY Name;
 
-
   /* 4- Escreva uma query para exibir todos os cientistas (valores numéricos) cujos projetos sejam AeH3 , Ast3 ou Che1 . */
+  SELECT * FROM Scientists.Projects
+  WHERE Code IN ('AeH3', 'Ast3', 'Che1');
 
   /* 5- Escreva uma query para exibir todas as informações de todos os projetos com mais de 500 horas. */
 
