@@ -68,4 +68,34 @@ VALUES
   UPDATE Pixar.Movies
   SET title = 'Ratatouille', year = 2007
   WHERE title = 'ratatui';
+
+  /* 5- Insira as novas classificações abaixo na tabela BoxOffice , lembre-se que a coluna movie_id é uma foreign key referente a coluna id da tabela Movies */
+  SELECT id, title FROM Pixar.Movies
+  WHERE title IN ('Monstros SA', 'Os Incríveis', 'WALL-E');
+
+  INSERT INTO Pixar.BoxOffice (movie_id, rating, domestic_sales, international_sales)
+  VALUES 
+  (8, 8.5, 300000000, 250000000),
+  (10, 7.4, 460000000, 510000000),
+  (11, 9.9, 290000000, 280000000);
+
+  /* 6- Exclua da tabela Movies o filme "WALL-E". */
+
+  DELETE FROM Pixar.BoxOffice
+  WHERE movie_id = 11;
+
+
+  DELETE FROM Pixar.Movies
+  WHERE title = 'WALL-E';
+
+  /* 7- Exclua da tabela Movies todos os filmes dirigidos por "Andrew Staton */
+  SELECT * FROM Pixar.Movies
+  WHERE director = 'Andrew Staton';
+
+  DELETE FROM Pixar.BoxOffice
+  WHERE movie_id IN (2, 9);
+
+  DELETE FROM Pixar.Movies
+  WHERE director = 'Andrew Staton';
+
   
