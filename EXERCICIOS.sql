@@ -29,8 +29,10 @@ VALUES
   WHERE title = 'ratatui';
 
   /* 5- Insira as novas classificações abaixo na tabela BoxOffice , lembre-se que a coluna movie_id é uma foreign key referente a coluna id da tabela Movies */
-  SELECT id, title FROM Pixar.Movies
-  WHERE title IN ('Monstros SA', 'Os Incríveis', 'WALL-E');
+  SELECT id, title
+  FROM Pixar.Movies
+  WHERE title
+  IN ('Monstros SA', 'Os Incríveis', 'WALL-E');
 
   INSERT INTO Pixar.BoxOffice (movie_id, rating, domestic_sales, international_sales)
   VALUES 
