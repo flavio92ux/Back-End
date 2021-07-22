@@ -44,7 +44,7 @@ INSERT INTO Pixar.Movies
   (title, director, year, length_minutes)
 VALUES
   ('Monstros SA', 'Pete Docter', 2001, 92),
-  ('Procurando Nemo', 'John Lasseter', 2003, 107),
+  ('Procurando Nemo', 'John Lasseter', 200003, 107),
   ('Os Incríveis', 'Brad Bird', 2004, 116),
   ('WALL-E', 'Pete Docter', 2008, 104);
 
@@ -97,5 +97,17 @@ VALUES
 
   DELETE FROM Pixar.Movies
   WHERE director = 'Andrew Staton';
+
+  /* 8- Altere a classificação da tabela BoxOffice para 9.0 de todos os filmes que lucraram mais de 400 milhões no mercado interno. */
+  UPDATE Pixar.BoxOffice
+  SET rating = 9
+  WHERE domestic_sales > 400000000; 
+
+  /* 9- Altere a classificação da tabela BoxOffice para 6.0 de todos os filmes que lucraram menos de 300 milhões no mercado internacional e mais de 200 milhões no mercado interno */
+  UPDATE Pixar.BoxOffice
+  SET rating = 6
+  WHERE international_sales < 300000000
+  AND domestic_sales > 200000000;
+
 
   
