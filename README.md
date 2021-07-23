@@ -1,8 +1,11 @@
-<h2>21.1 - Funções mais usadas no SQL</h2>
+<h2>Bloco 21 - Funções SQL, Joins e Subqueries</h2>
 
-<p>Manipulação de strings, Condicionais, Funções matemáticas do mySQL, funções de agregação AVG, MIN, MAX, SUM e COUNT
-Exibindo e filtrando dados  de forma agrupada com GROUP BY e HAVING
-</p>
+<ul>
+  <h3>Assuntos abordados</h3>
+  <li>21.1 - Funções mais usadas no SQL</li>
+  <li>21.2 - Descomplicando JOINs, UNIONS e Subqueries</li>
+  <li>21.3 - Stored Routines & Stored Functions</li>
+</ul>
 
 
 
