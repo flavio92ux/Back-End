@@ -1,6 +1,11 @@
-<h2>Reposiório de exercícios de BackEnd</h2>
+<h2>Bloco 21 - Funções SQL, Joins e Subqueries/h2>
 
-<p>Você poderá navegar por cada seção selecionando as branchs e sub-branchs específica por cada tópico</p>
+<ul>
+  <h3>Assuntos abordados</h3>
+  <li>21.1 - Funções mais usadas no SQL</li>
+  <li>21.2 - Descomplicando JOINs, UNIONS e Subqueries</li>
+  <li>21.3 - Stored Routines & Stored Functions</li>
+</ul>
 
 
 
