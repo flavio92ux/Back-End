@@ -39,4 +39,15 @@ WHERE
   a.district = 'California'
     AND c.first_name LIKE '%rene%';
 
-/* 5-  */
+/* 5- Exiba o nome e a quantidade de endereços dos clientes cadastrados. Ordene seus resultados por nomes de
+forma decrescente. Exiba somente os clientes ativos.
+As informações podem ser encontradas na tabela address e customer */
+SELECT c.first_name, COUNT(a.address) AS `quantidade de endereço`
+FROM
+  sakila.address AS a
+    INNER JOIN
+  sakila.customer AS c ON a.address_id = c.address_id
+WHERE
+  c.active = 1
+GROUP BY c.first_name
+ORDER BY c.first_name DESC;
