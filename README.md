@@ -1,7 +1,6 @@
-<h2>21.1 - Funções mais usadas no SQL</h2>
+<h2>21.1 - JOINS, UNIONS e Subqueries</h2>
 
-<p>Manipulação de strings, Condicionais, Funções matemáticas do mySQL, funções de agregação AVG, MIN, MAX, SUM e COUNT
-Exibindo e filtrando dados  de forma agrupada com GROUP BY e HAVING
+<p>Vamos utilizar os diferentes tipos de JOIN para juntar dados relacionados em um banco de dados. Similarmente, vai entender como unir resultados de duas ou mais queries em apenas uma através do UNION e a construir queries aninhadas através do conceito de SUBQUERIES .
 </p>
 
 
