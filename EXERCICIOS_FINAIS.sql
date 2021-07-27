@@ -74,3 +74,23 @@ WHERE EXISTS (SELECT * FROM Movies WHERE t.id = Movies.theater_id);
 /* 9- Utilizando o EXISTS , selecione o nome e localização dos cinemas que não possuem filmes em cartaz. */
 SELECT t.name, t.location FROM Theater as t
 WHERE NOT EXISTS (SELECT * FROM Movies WHERE t.id = Movies.theater_id);
+
+/* 10- Utilizando o INNER JOIN , selecione todas as informações dos filmes com avaliação maior que 8 e que estejam em cartaz. */
+SELECT * FROM Movies AS m
+INNER JOIN BoxOffice AS b ON m.id = b.movie_id WHERE b.rating > 8 AND m.theater_id IS NOT NULL;
+
+/* 11- Utilizando o SELF JOIN , selecione os títulos e duração dos filmes que possuem o mesmo diretor. */
+SELECT t1.title, t1.length_minutes, t2.title, t2.length_minutes FROM Movies t1, Movies t2
+WHERE t1.director = t2.director;
+
+/* 12- Faça duas buscas, uma utilizando SUBQUERY e outra utilizando INNER JOIN , que retornem o título dos filmes
+que arrecadaram 500 milhões ou mais, e que possuem duração maior que 110 minutos. */
+SELECT title FROM Movies
+WHERE length_minutes > 110
+AND id IN (SELECT movie_id FROM BoxOffice WHERE (domestic_sales + international_sales) > 500000000);
+
+SELECT title FROM Movies m
+INNER JOIN BoxOffice b
+ON b.movie_id = m.id
+WHERE (b.domestic_sales + b.international_sales) > 500000000
+AND m.length_minutes > 110;
