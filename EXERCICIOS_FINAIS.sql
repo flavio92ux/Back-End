@@ -59,8 +59,18 @@ INNER JOIN
   BoxOffice b ON b.movie_id = m.id
 WHERE b.rating > 7.5;
 
+/* 7- Faça duas buscas, uma utilizando SUBQUERY e outra utilizando INNER JOIN ,
+que retornem as avaliações dos filmes lançados depois de 2009. */
+SELECT rating FROM BoxOffice
+WHERE movie_id IN (SELECT id FROM Movies WHERE year > 2009);
 
+SELECT rating FROM Pixar.BoxOffice b
+INNER JOIN Pixar.Movies m ON m.id = b.movie_id WHERE m.year > 2009;
 
+/* 8- Utilizando o EXISTS , selecione o nome e localização dos cinemas que possuem filmes em cartaz. */
+SELECT t.name, t.location FROM Theater as t
+WHERE EXISTS (SELECT * FROM Movies WHERE t.id = Movies.theater_id);
 
-
-
+/* 9- Utilizando o EXISTS , selecione o nome e localização dos cinemas que não possuem filmes em cartaz. */
+SELECT t.name, t.location FROM Theater as t
+WHERE NOT EXISTS (SELECT * FROM Movies WHERE t.id = Movies.theater_id);
