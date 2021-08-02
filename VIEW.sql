@@ -18,3 +18,43 @@ CREATE VIEW film_with_categories AS
 SELECT * FROM film_with_categories;
 
 DROP VIEW film_with_categories;
+
+/* 2- Crie uma view chamada film_info utilizando as tabelas actor , film_actor e film do banco de dados sakila . Sua
+view deve exibir o actor_id , o nome completo do ator ou da atriz em uma coluna com o ALIAS actor e o título dos filmes.
+Os resultados devem ser ordenados pelos nomes de atores e atrizes. Use a imagem a seguir como referência */
+
+CREATE VIEW film_info AS
+  SELECT
+    fa.actor_id,
+    CONCAT(a.first_name, ' ', a.last_name) AS actor,
+    f.title
+  FROM
+    film_actor fa
+  INNER JOIN
+    film f ON f.film_id = fa.film_id
+  INNER JOIN
+    actor a ON a.actor_id = fa.actor_id
+  ORDER BY 2;
+
+  SELECT * FROM film_info;
+
+  DROP VIEW film_info;
+
+/* 3- Crie uma view chamada address_info que faça uso das tabelas address e city do banco de dados sakila .
+Sua view deve exibir o address_id , o address , o district , o city_id e a city . Os resultados devem ser
+ordenados pelo nome das cidades. Use a imagem abaixo como referência. */
+
+CREATE VIEW address_info AS
+  SELECT
+    a.address_id,
+    a.address,
+    a.district,
+    c.city_id,
+    c.city
+  FROM
+    address a
+  INNER JOIN
+    city c ON a.city_id = c.city_id
+  ORDER BY c.city;
+
+SELECT * FROM address_info;
