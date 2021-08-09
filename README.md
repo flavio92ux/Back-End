@@ -1,11 +1,8 @@
-<h2>Bloco 23 - Introdução ao MongoDB</h2>
+<h2>Bloco 23.1 - Primeiro banco noSQL</h2>
 
-<ul>
-  <h3>Assuntos abordados</h3>
-  <li>23.1 - Introducao - noSQL</li>
-  <li>23.2 - MongoDB - Introdução</li>
-  <li>23.3 - Filter Operators</li>
-</ul>
+<p>
+  Comandos: show dbs; use; db.banco.insertOne(); db.banco.insertMany(); db.banco.find(), pretty()
+</p>
 
 
 
