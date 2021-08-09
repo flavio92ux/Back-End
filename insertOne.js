@@ -1,7 +1,7 @@
 //mostra os bancos de dados disponiveis
 show dbs;
 //cria o banco de dados veiculos
-use veiculos;
+use 'veiculos';
 //insere o objeto fusca 
 db.carros.insertOne({nome: "Fusca", preco: 20000});
 //insere o objeto camaro com um id especifico

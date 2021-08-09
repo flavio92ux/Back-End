@@ -1,5 +1,3 @@
-use test;
-
 /* O método find() , quando utilizado sem parâmetros, retorna todos os documentos da coleção juntamente com todos
 os seus campos. Por exemplo, a operação abaixo retorna todos os documentos da coleção bios : */
 db.bios.find();
