@@ -24,3 +24,9 @@ db.bios.find( { "name.last": "Hopper" } );
 
  /* Exemplo de utilização do método pretty() , usando a coleção bios : */
  db.bios.find().limit(5).pretty();
+
+ /* pulará os dois primeiros documentos e retornará o cursor a partir daí: */
+ db.bios.find().skip(2)
+
+ /* Você pode combinar os métodos limit() e skip() criando, assim, uma paginação: */
+ db.bios.find().limit(10).skip(5)
