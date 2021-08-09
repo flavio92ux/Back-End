@@ -1,7 +1,7 @@
-<h2>Bloco 23.1 - Introducao ao MongoDB</h2>
+<h2>Bloco 23.2 - Operadores de filtro e logicos</h2>
 
 <p>
-  Comandos: show dbs; use; db.banco.insertOne(); db.banco.insertMany(); db.banco.find(), pretty()
+  Utilizar os operadores de comparação, Utilizar os operadores lógicos, Compor filtros avançados com $not e $nor, etc
 </p>
 
 
