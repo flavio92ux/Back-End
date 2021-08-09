@@ -1,0 +1,9 @@
+show dbs;
+
+use veiculos;
+
+db.carros.insertOne({nome: "Fusca", preco: 20000});
+
+db.carros.insertOne({_id: 1, nome: "Camaro", preco: 220000});
+
+db.carros.find();
