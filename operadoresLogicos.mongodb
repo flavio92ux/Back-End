@@ -25,7 +25,7 @@ do tipo Delicatessen. */
 db.restaurants.find({
   $or: [
     { $and: [
-      { $or: [{ rating: { $gte: 6, $lt: 10 } }] },
+      { rating: { $gte: 6, $lt: 10 } },
       { borough: 'Brooklyn' }
     ]},
     { cuisine: { $ne: 'Delicatessen' } }]
