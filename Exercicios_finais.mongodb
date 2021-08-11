@@ -72,3 +72,15 @@ x-> sejam Mutantes
 z-> nao sejam publicados pela DC comics
 
 (p ^ q) ^ (w v x) ^ z
+
+/* Exercício 16: Retorne o total de documentos que não contêm o campo race . */
+db.superheroes.count({ 'race': { $exists: false } });
+
+/* Exercício 17: Retorne o total de documentos que contêm o campo hairColor. */
+db.superheroes.count({ 'aspects.hairColor': { $exists: true } });
+
+/* Exercício 18: Remova apenas um documento publicado pela Sony Pictures. */
+db.superheroes.deleteOne({ 'publisher': 'Sony Pictures' });
+
+/* Exercício 19: Remova todos os documentos publicados pelo George Lucas . */
+db.superheroes.deleteMany({ 'publisher': 'George Lucas' });
