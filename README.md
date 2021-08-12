@@ -1,6 +1,8 @@
-<h2>Exercicios 20.2 - Encontrando dados em um banco de dados</h2>
+<h2>Exercicios 24.1 - Updates Simples</h2>
 
-<p>Comandos aprendidos: SELECT, CONCAT, DISTINCT, COUNT, LIMIT, ORDER BY</p>
+<p>Alterando um único documento, alterando múltiples documentos, operador $set, $inc, $min, $max, $currentDate, $rename
+$unset
+</p>
 
 
 
