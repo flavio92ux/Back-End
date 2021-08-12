@@ -1,11 +1,10 @@
-<h2>Bloco 20 - Introdução ao SQL</h2>
+<h2>Bloco 24 - MongoDB - Updates Simples e Complexos</h2>
 
 <ul>
   <h3>Assuntos abordados</h3>
-  <li>20.1 - Introducao SQL</li>
-  <li>20.2 - Encontrando dados em um banco de dados</li>
-  <li>20.3 - Filtrando dados de forma específica</li>
-  <li>20.4 - Manipulando tabelas</li>
+  <li>24.1 - Updates Simples</li>
+  <li>24.2 - Updates Complexos - Arrays - Parte 1</li>
+  <li>24.3 - Updates Complexos - Arrays - Parte 2</li>
 </ul>
 
 
