@@ -1,7 +1,7 @@
-<h2>Exercicios 25.1 - Aggregation Framework Part I</h2>
+<h2>Exercicios 25.2 - Aggregation Framework Part II</h2>
 
 <p>
-  Operadores: Aggregation Pipeline, $match, $limit, $project, $group, $unwind, $lookup
+  Operadores: let, pipeline, $add, $subtract, $ceil, $floor, $round, $abs, $multiply, $divide, $addFields
 </p>
 
 
