@@ -1,0 +1,3 @@
+/* utilizando o $unwind como um estágio do pipeline  */
+db.inventory.aggregate([{ $unwind : "$sizes" }]);
+
