@@ -1,0 +1,101 @@
+/* Exercício 1 : Utilize uma combinação das expressões aritméticas e
+adicione um campo chamado idade à coleção clientes  */
+db.clientes.aggregate([
+  { 
+    $addFields: {
+      idade: {
+        $round: [
+          {
+            $divide: [
+              {
+                $subtract: [new Date(), "$dataNascimento"] },
+                86400000 * 365],
+      }, 0] }
+    },
+  },
+]);
+
+/* Exercício 2 : Utilizando o novo campo idade , conte quantos clientes
+têm entre 18 e 25 anos. */
+db.clientes.aggregate([
+  { 
+    $addFields: {
+      idade: {
+        $round: [
+          {
+            $divide: [
+              {
+                $subtract: [new Date(), "$dataNascimento"] },
+                86400000 * 365],
+      }, 0] }
+    },
+  },
+  {
+    $match: { idade: { $gte: 18, $lte: 25 } }
+  },
+  {
+    $count: "totalClientes"
+  }
+]);
+
+/* Exercício 3 : Remova os estágios $count e $match do exercício anterior
+e adicione um estágio no pipeline que coloque as compras do cliente no
+campo compras */
+db.clientes.aggregate([
+  { 
+    $addFields: {
+      idade: {
+        $round: [
+          {
+            $divide: [
+              {
+                $subtract: [new Date(), "$dataNascimento"] },
+                86400000 * 365],
+      }, 0] }
+    },
+  },
+  {
+    $lookup: {
+      from: 'vendas',
+      let: { cliente_id: "$clienteId" },
+      pipeline: [{ $match: { $expr: { $eq: ["$clienteId", "$$cliente_id"] } } }],
+      as: 'compras'
+    }
+  }
+]);
+
+/* 4- Exercício 4 : Selecione TODOS os clientes que compraram entre Junho
+de 2019 e Março de 2020 */
+db.clientes.aggregate([
+  { 
+    $addFields: {
+      idade: {
+        $round: [
+          {
+            $divide: [
+              {
+                $subtract: [new Date(), "$dataNascimento"] },
+                86400000 * 365],
+      }, 0] }
+    },
+  },
+  {
+    $lookup: {
+      from: 'vendas',
+      let: { cliente_id: "$clienteId" },
+      pipeline: [{ $match: { $expr: { $eq: ["$clienteId", "$$cliente_id"] } } }],
+      as: 'compras'
+    }
+  },
+  {
+    $match: {
+      "compras.dataVenda": {
+        $gte: ISODate("2019-06-01"),
+        $lte: ISODate("2020-04-01"),
+      },
+    },
+  },
+]);
+
+db.vendas.find();
+db.clientes.find();
