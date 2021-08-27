@@ -1,18 +1,17 @@
-/* Realize o download deste arquivo e salve-o como simpsons.json .
-Utilize o arquivo baixado para realizar os requisitos abaixo.
+/* Exercício 4 - Crie testes para uma função que escreverá um conteúdo em um arquivo específico.
+-Essa função deverá receber dois parâmetros: o nome do arquivo e o conteúdo desse arquivo.
+-Após concluir a escrita do arquivo ela deverá retornar um ok.
 
-1-Crie uma função que leia todos os dados do arquivo e imprima cada personagem no
-formato id - Nome . Por exemplo: 1 - Homer Simpson.
-
-2-Crie uma função que receba o id de uma personagem como parâmetro e retorne uma Promise que é resolvida
-com os dados da personagem que possui o id informado. Caso não haja uma personagem com o id informado,
-rejeite a Promise com o motivo "id não encontrado".
-
-3-Crie uma função que altere o arquivo simpsons.json retirando os personagens com id 10 e 6.
-
-4-Crie uma função que leia o arquivo simpsons.json e crie um novo arquivo, chamado simpsonFamily.json, 
-contendo as personagens com id de 1 a 4.
-
-5- Crie uma função que adicione ao arquivo simpsonFamily.json o personagem Nelson Muntz
-
+1-Descreva todos os cenários de teste utilizando describes;
+2-Descreva todos os testes que serão feitos utilizando its;
+3-Crie as asserções validando se o retorno da função possui o valor e tipo esperado.
 */
+
+const { expect } = require("chai");
+
+describe('Verifica se a funcao retorna ok', () => {
+  it('', () => {
+    const resposta = criaArquivo('arquivo.txt', 'Ola mundo!');
+    expect(resposta).to.be.equals('ok');
+  });
+});
