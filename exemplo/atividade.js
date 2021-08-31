@@ -32,6 +32,8 @@ status e um JSON com uma mensagem de erro, ex: status 401 e
 { "message": "invalid token" }
 -Caso tenha sucesso deve ser feito um fetch em uma API externa de sua
 preferência e retorne os dados da API como resposta;
+
+4-
 */
 
 const express = require('express');
@@ -58,7 +60,6 @@ app.get('/btc', isValidToken, async (_req, res) => {
     res.status(401).json({ 'message': 'invalid token' });
   }
   
-
 });
 
 app.listen(3001, () => { console.log('Ouvindo na porta 3001') });
