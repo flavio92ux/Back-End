@@ -1,6 +1,2 @@
-Exercícios 26.1 - Introdução ao Node.js
+Bloco 21.1 - Arquitetura de Sofware - Camada de Model
 
-Pacotes:
-
-npm i readline-sync
-const readline = require('readline-sync'); #permite perguntar ao usuario dados a serem inseridos.
