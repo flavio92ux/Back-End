@@ -1,2 +1,2 @@
-Bloco 21.1 - Arquitetura de Sofware - Camada de Model
+Bloco 27.2 - Camada de Controller e Service.
 
