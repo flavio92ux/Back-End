@@ -1,2 +1,2 @@
-Bloco 27.2 - Camada de Controller e Service.
+Bloco 27.3 - REST e RESTful
 
