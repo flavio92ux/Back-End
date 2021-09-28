@@ -3,9 +3,10 @@ const express = require('express');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+const MESSAGE = process.env.MESSAGE || 'Ola mundo!';
 
 app.get('/', (_req, res) => {
-  res.send('Ola mundo!');
+  res.send(MESSAGE);
 });
 
 app.listen(PORT, () => {
