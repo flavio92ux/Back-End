@@ -17,4 +17,9 @@ const createMessage = (message) => {
   messagesUl.appendChild(li);
 };
 
+window.onbeforeunload = function() {
+  socket.disconnect();
+};
+//esse trecho garante que ira desconectar o socket quando a conexao for encerrada
+
 socket.on('serverMessage', (message) => createMessage(message));
